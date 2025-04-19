@@ -2,5 +2,5 @@
     "name": "CryptoTree Coin",
     "symbol": "CTC",
     "description": "Crypto Tree Coin for game",
-    "image" : ""
+    "image" : "https://raw.githubusercontent.com/TranVuGiang/CryptoPlant/refs/heads/main/public/tree-coin.png"
 }
