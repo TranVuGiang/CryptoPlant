@@ -9,7 +9,16 @@
   "instructions": [
     {
       "name": "close",
-      "discriminator": [98, 165, 201, 177, 108, 65, 206, 96],
+      "discriminator": [
+        98,
+        165,
+        201,
+        177,
+        108,
+        65,
+        206,
+        96
+      ],
       "accounts": [
         {
           "name": "payer",
@@ -24,8 +33,70 @@
       "args": []
     },
     {
+      "name": "create_player",
+      "discriminator": [
+        19,
+        178,
+        189,
+        216,
+        159,
+        134,
+        0,
+        192
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "player",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  108,
+                  97,
+                  121,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "authority"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        }
+      ]
+    },
+    {
       "name": "decrement",
-      "discriminator": [106, 227, 168, 59, 248, 27, 150, 101],
+      "discriminator": [
+        106,
+        227,
+        168,
+        59,
+        248,
+        27,
+        150,
+        101
+      ],
       "accounts": [
         {
           "name": "cryptoplant",
@@ -36,7 +107,16 @@
     },
     {
       "name": "increment",
-      "discriminator": [11, 18, 104, 9, 104, 174, 59, 33],
+      "discriminator": [
+        11,
+        18,
+        104,
+        9,
+        104,
+        174,
+        59,
+        33
+      ],
       "accounts": [
         {
           "name": "cryptoplant",
@@ -47,7 +127,16 @@
     },
     {
       "name": "initialize",
-      "discriminator": [175, 175, 109, 31, 13, 152, 155, 237],
+      "discriminator": [
+        175,
+        175,
+        109,
+        31,
+        13,
+        152,
+        155,
+        237
+      ],
       "accounts": [
         {
           "name": "payer",
@@ -68,7 +157,16 @@
     },
     {
       "name": "set",
-      "discriminator": [198, 51, 53, 241, 116, 29, 126, 194],
+      "discriminator": [
+        198,
+        51,
+        53,
+        241,
+        116,
+        29,
+        126,
+        194
+      ],
       "accounts": [
         {
           "name": "cryptoplant",
@@ -81,12 +179,86 @@
           "type": "u8"
         }
       ]
+    },
+    {
+      "name": "update_player_score",
+      "discriminator": [
+        61,
+        168,
+        107,
+        150,
+        46,
+        189,
+        206,
+        173
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "player"
+          ]
+        },
+        {
+          "name": "player",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  108,
+                  97,
+                  121,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "authority"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "new_score",
+          "type": "u64"
+        }
+      ]
     }
   ],
   "accounts": [
     {
       "name": "Cryptoplant",
-      "discriminator": [255, 176, 4, 245, 188, 253, 124, 25]
+      "discriminator": [
+        126,
+        196,
+        183,
+        236,
+        76,
+        194,
+        18,
+        5
+      ]
+    },
+    {
+      "name": "Player",
+      "discriminator": [
+        205,
+        222,
+        112,
+        7,
+        165,
+        155,
+        206,
+        218
+      ]
     }
   ],
   "types": [
@@ -98,6 +270,34 @@
           {
             "name": "count",
             "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Player",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "pubkey"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "score",
+            "type": "u64"
+          },
+          {
+            "name": "level",
+            "type": "u8"
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
           }
         ]
       }
