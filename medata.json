@@ -1,18 +1,6 @@
 {
-  "name": "CryptoTree Coin",
-  "symbol": "CTC",
-  "description": "Crypto Tree Coin for game",
-  "image": "https://raw.githubusercontent.com/TranVuGiang/CryptoPlant/refs/heads/main/public/tree-coin.png",
-  "seller_fee_basis_points": 0,
-  "attributes": [],
-  "properties": {
-    "files": [
-      {
-        "uri": "https://raw.githubusercontent.com/TranVuGiang/CryptoPlant/refs/heads/main/public/tree-coin.png",
-        "type": "image/png"
-      }
-    ],
-    "category": "image",
-    "creators": []
-  }
+    "name": "CryptoTree Coin",
+    "symbol": "CTC",
+    "description": "Crypto Tree Coin for game",
+    "image" : "https://raw.githubusercontent.com/TranVuGiang/CryptoPlant/refs/heads/main/public/tree-coin.png"
 }
