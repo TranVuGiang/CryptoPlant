@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-cryptoplant = "coUnmi3oBUtwtd9fjeAvSsJssXh5A5xyPbhpewyzRVF"
+cryptoplant = "F9q3LimRzpLZRj37KTFfNg7xaQn7NhhA5pyW3rq65bpE"
 
 [registry]
 url = "https://api.apr.dev"
@@ -27,3 +27,12 @@ upgradeable = false
 bind_address = "127.0.0.1"
 ledger = ".anchor/test-ledger"
 rpc_port = 8899
+
+
+[net]
+git-fetch-with-cli = true
+
+[idl]
+out_dir = "target/idl"
+format = "json"
+

@@ -1,0 +1,26 @@
+{
+    "name": "Main Tree Collection",
+    "symbol": "MTC",
+    "description": "This is the official collection of SoulTrees in the Crypto Plant game.",
+    "image": "TO_BE_REPLACED.png",
+    "collection": {
+      "name": "Main Tree Collection",
+      "family": "CryptoPlant"
+    },
+    "properties": {
+      "files": [
+        {
+          "uri": "TO_BE_REPLACED.png",
+          "type": "image/png"
+        }
+      ],
+      "category": "image",
+      "creators": [
+        {
+          "address": "FG3zw7vkVRyTEiajSZkZMxGafjUShK7fL88vC4pkZewf",
+          "share": 100
+        }
+      ]
+    }
+  }
+  
